@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -17,8 +16,7 @@ const Navigation = () => {
   ];
 
   const handleDownloadResume = () => {
-    // Create a dummy resume download - replace with actual resume link
-    console.log("Downloading resume...");
+    window.open("https://drive.google.com/file/d/1zlqvr_Be5x_5sUv3psWdsnpZK5YjL1S-/view?usp=sharing", "_blank");
   };
 
   return (

@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 
 const Skills = () => {
@@ -110,8 +111,8 @@ const Skills = () => {
           <div className="flex justify-center space-x-8">
             {[
               { name: "GitHub", url: "https://github.com", color: "from-gray-600 to-gray-800" },
-              { name: "LeetCode", url: "https://leetcode.com", color: "from-yellow-600 to-orange-600" },
-              { name: "HackerRank", url: "https://hackerrank.com", color: "from-green-600 to-emerald-600" },
+              { name: "LeetCode", url: "https://leetcode.com/u/bharathvetrayan/", color: "from-yellow-600 to-orange-600" },
+              { name: "HackerRank", url: "https://www.hackerrank.com/profile/bharathvetrayan1", color: "from-green-600 to-emerald-600" },
             ].map((platform, index) => (
               <motion.a
                 key={platform.name}

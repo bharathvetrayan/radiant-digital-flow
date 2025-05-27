@@ -6,7 +6,7 @@ import ThreeScene from "@/components/ThreeScene";
 
 const Index = () => {
   const handleDownloadResume = () => {
-    console.log("Downloading resume...");
+    window.open("https://drive.google.com/file/d/1zlqvr_Be5x_5sUv3psWdsnpZK5YjL1S-/view?usp=sharing", "_blank");
   };
 
   return (
@@ -95,7 +95,7 @@ const Index = () => {
             </div>
           </a>
           <a
-            href="https://leetcode.com"
+            href="https://leetcode.com/u/bharathvetrayan/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-yellow-400 transition-colors duration-300 transform hover:scale-110"
