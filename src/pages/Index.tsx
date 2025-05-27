@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import ThreeScene from "@/components/ThreeScene";
@@ -6,6 +5,10 @@ import ThreeScene from "@/components/ThreeScene";
 const Index = () => {
   const handleDownloadResume = () => {
     window.open("https://drive.google.com/file/d/1zlqvr_Be5x_5sUv3psWdsnpZK5YjL1S-/view?usp=sharing", "_blank");
+  };
+
+  const handleNewsletterSubscribe = () => {
+    window.open("https://makesimplewithbharath.beehiiv.com/", "_blank");
   };
 
   return (
@@ -96,6 +99,28 @@ const Index = () => {
               LC
             </div>
           </a>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.8 }}
+          className="mt-12 max-w-md mx-auto"
+        >
+          <div className="bg-gray-800/30 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50">
+            <h3 className="text-xl font-semibold text-white mb-2">
+              📧 Subscribe to my Newsletter
+            </h3>
+            <p className="text-gray-300 text-sm mb-4">
+              Get the latest updates on my projects and tech insights
+            </p>
+            <Button
+              onClick={handleNewsletterSubscribe}
+              className="w-full bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white rounded-full transition-all duration-300 transform hover:scale-105"
+            >
+              Subscribe Now
+            </Button>
+          </div>
         </motion.div>
       </div>
 
