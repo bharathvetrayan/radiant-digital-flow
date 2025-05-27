@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 
@@ -95,19 +96,9 @@ const Projects = () => {
                 <div className="flex gap-3">
                   <Button
                     asChild
-                    size="sm"
-                    className="flex-1 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white"
-                  >
-                    <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                      Live Demo
-                    </a>
-                  </Button>
-                  
-                  <Button
-                    asChild
                     variant="outline"
                     size="sm"
-                    className="flex-1 border-gray-600 text-gray-300 hover:bg-gray-700"
+                    className="w-full border-gray-600 text-gray-300 hover:bg-gray-700"
                   >
                     <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
                       GitHub
