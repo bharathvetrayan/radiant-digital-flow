@@ -82,7 +82,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-gray-300">Email</p>
-                    <p className="text-blue-400">bharath@example.com</p>
+                    <p className="text-blue-400">bharathvetrayan11@gmail.com</p>
                   </div>
                 </div>
                 
@@ -92,7 +92,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-gray-300">Location</p>
-                    <p className="text-blue-400">Available Worldwide</p>
+                    <p className="text-blue-400">Coimbatore, Tamil Nadu</p>
                   </div>
                 </div>
                 
@@ -102,7 +102,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-gray-300">Status</p>
-                    <p className="text-green-400">Available for Projects</p>
+                    <p className="text-green-400">Available for Internship</p>
                   </div>
                 </div>
               </div>

@@ -1,36 +1,28 @@
-
 import { motion } from "framer-motion";
 
 const Skills = () => {
   const skillCategories = [
     {
-      title: "Frontend",
+      title: "Programming Languages",
       skills: [
-        { name: "React.js", level: 90 },
-        { name: "TypeScript", level: 85 },
-        { name: "Next.js", level: 80 },
-        { name: "Tailwind CSS", level: 95 },
-        { name: "Framer Motion", level: 75 },
+        { name: "Java", level: 85 },
+        { name: "C", level: 80 },
+        { name: "Dart", level: 75 },
       ]
     },
     {
-      title: "Backend",
+      title: "Web Development",
       skills: [
-        { name: "Node.js", level: 85 },
-        { name: "Python", level: 80 },
-        { name: "Express.js", level: 85 },
-        { name: "PostgreSQL", level: 75 },
-        { name: "MongoDB", level: 70 },
+        { name: "HTML", level: 90 },
+        { name: "CSS", level: 85 },
+        { name: "JavaScript", level: 80 },
       ]
     },
     {
-      title: "Tools & Cloud",
+      title: "Tools & Version Control",
       skills: [
-        { name: "AWS", level: 75 },
-        { name: "Docker", level: 70 },
-        { name: "Git", level: 90 },
-        { name: "Figma", level: 80 },
-        { name: "Firebase", level: 75 },
+        { name: "Git", level: 85 },
+        { name: "Android Studio", level: 75 },
       ]
     }
   ];

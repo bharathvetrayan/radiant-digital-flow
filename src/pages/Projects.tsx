@@ -1,53 +1,28 @@
-
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 
 const Projects = () => {
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "Full-stack e-commerce solution with React, Node.js, and Stripe integration",
-      tech: ["React", "Node.js", "MongoDB", "Stripe"],
+      title: "Netflix Landing Page Clone",
+      description: "A responsive clone of Netflix's landing page using HTML, CSS, and JavaScript.",
+      tech: ["HTML", "CSS", "JavaScript"],
       image: "/placeholder.svg",
       liveUrl: "#",
       githubUrl: "#"
     },
     {
-      title: "Task Management App",
-      description: "Collaborative task management with real-time updates and team features",
-      tech: ["Next.js", "Socket.io", "PostgreSQL", "Prisma"],
+      title: "Sign-up Page",
+      description: "A modern and responsive sign-up page with form validation.",
+      tech: ["HTML", "CSS", "JavaScript"],
       image: "/placeholder.svg",
       liveUrl: "#",
       githubUrl: "#"
     },
     {
-      title: "AI Chat Application",
-      description: "AI-powered chat app with natural language processing capabilities",
-      tech: ["React", "Python", "OpenAI", "FastAPI"],
-      image: "/placeholder.svg",
-      liveUrl: "#",
-      githubUrl: "#"
-    },
-    {
-      title: "Weather Dashboard",
-      description: "Beautiful weather dashboard with forecasts and interactive maps",
-      tech: ["Vue.js", "Express", "Weather API", "Chart.js"],
-      image: "/placeholder.svg",
-      liveUrl: "#",
-      githubUrl: "#"
-    },
-    {
-      title: "Fitness Tracker",
-      description: "Mobile-first fitness tracking app with progress visualization",
-      tech: ["React Native", "Firebase", "Redux", "Charts"],
-      image: "/placeholder.svg",
-      liveUrl: "#",
-      githubUrl: "#"
-    },
-    {
-      title: "Portfolio Website",
-      description: "This very portfolio with 3D animations and interactive elements",
-      tech: ["React", "Three.js", "Framer Motion", "Tailwind"],
+      title: "Real-time Chat App",
+      description: "Android chat application developed using Android Studio.",
+      tech: ["Java", "Android Studio", "XML"],
       image: "/placeholder.svg",
       liveUrl: "#",
       githubUrl: "#"
