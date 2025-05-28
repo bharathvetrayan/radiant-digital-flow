@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import ThreeScene from "@/components/ThreeScene";
@@ -102,24 +103,28 @@ const Index = () => {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 1.8 }}
-          className="mt-12 max-w-md mx-auto"
+          className="mt-16"
         >
-          <div className="bg-gray-800/30 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50">
-            <h3 className="text-xl font-semibold text-white mb-2">
-              📧 Subscribe to my Newsletter
-            </h3>
-            <p className="text-gray-300 text-sm mb-4">
-              Get the latest updates on my projects and tech insights
-            </p>
-            <Button
-              onClick={handleNewsletterSubscribe}
-              className="w-full bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white rounded-full transition-all duration-300 transform hover:scale-105"
-            >
-              Subscribe Now
-            </Button>
+          <div className="relative bg-gradient-to-r from-green-500/10 to-emerald-500/10 backdrop-blur-sm rounded-2xl p-8 border border-green-500/20 max-w-sm mx-auto">
+            <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+              <div className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-1 rounded-full text-sm font-medium">
+                📧 Newsletter
+              </div>
+            </div>
+            <div className="text-center mt-4">
+              <h3 className="text-lg font-bold text-white mb-4">
+                Stay Updated
+              </h3>
+              <Button
+                onClick={handleNewsletterSubscribe}
+                className="w-full bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg"
+              >
+                Subscribe Now
+              </Button>
+            </div>
           </div>
         </motion.div>
       </div>
