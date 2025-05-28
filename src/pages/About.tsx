@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 
 const About = () => {
@@ -115,9 +116,10 @@ const About = () => {
                 transition={{ duration: 0.6, delay: 1.2 + index * 0.2 }}
                 whileHover={{ 
                   scale: 1.02,
-                  boxShadow: "0 10px 30px rgba(59, 130, 246, 0.1)"
+                  y: -5,
+                  boxShadow: "0 20px 40px rgba(59, 130, 246, 0.15)"
                 }}
-                className="bg-gray-800/50 rounded-xl p-6 border border-gray-700/50 backdrop-blur-sm cursor-pointer"
+                className="bg-gray-800/50 rounded-xl p-6 border border-gray-700/50 backdrop-blur-sm cursor-pointer transition-all duration-300 hover:border-blue-500/50 hover:bg-gray-800/70"
               >
                 <h4 className="text-xl font-bold text-white mb-2">{item.title}</h4>
                 <p className="text-blue-400 mb-2">{item.institution}</p>
@@ -143,9 +145,10 @@ const About = () => {
                 transition={{ duration: 0.6, delay: 1.8 + index * 0.2 }}
                 whileHover={{ 
                   scale: 1.02,
-                  boxShadow: "0 10px 30px rgba(34, 197, 94, 0.1)"
+                  y: -5,
+                  boxShadow: "0 20px 40px rgba(34, 197, 94, 0.15)"
                 }}
-                className="bg-gray-800/50 rounded-xl p-6 border border-gray-700/50 backdrop-blur-sm cursor-pointer"
+                className="bg-gray-800/50 rounded-xl p-6 border border-gray-700/50 backdrop-blur-sm cursor-pointer transition-all duration-300 hover:border-green-500/50 hover:bg-gray-800/70"
               >
                 <h4 className="text-xl font-bold text-white mb-2">{item.title}</h4>
                 <p className="text-gray-300 mb-2">{item.description}</p>

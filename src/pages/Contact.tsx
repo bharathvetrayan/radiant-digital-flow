@@ -12,7 +12,9 @@ const Contact = () => {
     email: "",
     message: ""
   });
+  const [newsletterEmail, setNewsletterEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isNewsletterSubmitting, setIsNewsletterSubmitting] = useState(false);
   const { toast } = useToast();
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -31,6 +33,22 @@ const Contact = () => {
     setIsSubmitting(false);
   };
 
+  const handleNewsletterSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsNewsletterSubmitting(true);
+
+    // Simulate newsletter subscription
+    await new Promise(resolve => setTimeout(resolve, 1000));
+
+    toast({
+      title: "Subscribed successfully!",
+      description: "Welcome to my newsletter! You'll receive updates on my latest projects.",
+    });
+
+    setNewsletterEmail("");
+    setIsNewsletterSubmitting(false);
+  };
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData(prev => ({
       ...prev,
@@ -46,7 +64,7 @@ const Contact = () => {
       transition={{ duration: 0.6 }}
       className="relative min-h-screen pt-24 pb-16 px-4"
     >
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ y: 30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -63,12 +81,12 @@ const Contact = () => {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-3 gap-8 mb-16">
           <motion.div
             initial={{ x: -50, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="space-y-8"
+            className="lg:col-span-1 space-y-8"
           >
             <div>
               <h3 className="text-2xl font-bold text-white mb-6">
@@ -139,39 +157,41 @@ const Contact = () => {
             initial={{ x: 50, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700/50"
+            className="lg:col-span-2 bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700/50"
           >
             <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
-                  Name
-                </label>
-                <Input
-                  id="name"
-                  name="name"
-                  type="text"
-                  required
-                  value={formData.name}
-                  onChange={handleChange}
-                  className="bg-gray-700/50 border-gray-600 text-white placeholder-gray-400 focus:border-blue-500"
-                  placeholder="Your Name"
-                />
-              </div>
+              <div className="grid md:grid-cols-2 gap-6">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
+                    Name
+                  </label>
+                  <Input
+                    id="name"
+                    name="name"
+                    type="text"
+                    required
+                    value={formData.name}
+                    onChange={handleChange}
+                    className="bg-gray-700/50 border-gray-600 text-white placeholder-gray-400 focus:border-blue-500"
+                    placeholder="Your Name"
+                  />
+                </div>
 
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-                  Email
-                </label>
-                <Input
-                  id="email"
-                  name="email"
-                  type="email"
-                  required
-                  value={formData.email}
-                  onChange={handleChange}
-                  className="bg-gray-700/50 border-gray-600 text-white placeholder-gray-400 focus:border-blue-500"
-                  placeholder="your.email@example.com"
-                />
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+                    Email
+                  </label>
+                  <Input
+                    id="email"
+                    name="email"
+                    type="email"
+                    required
+                    value={formData.email}
+                    onChange={handleChange}
+                    className="bg-gray-700/50 border-gray-600 text-white placeholder-gray-400 focus:border-blue-500"
+                    placeholder="your.email@example.com"
+                  />
+                </div>
               </div>
 
               <div>
@@ -200,6 +220,76 @@ const Contact = () => {
             </form>
           </motion.div>
         </div>
+
+        {/* Newsletter Section */}
+        <motion.div
+          initial={{ y: 50, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className="relative"
+        >
+          <div className="bg-gradient-to-r from-emerald-500/10 via-green-500/10 to-teal-500/10 backdrop-blur-sm rounded-3xl p-8 border border-emerald-500/20 relative overflow-hidden">
+            {/* Background Pattern */}
+            <div className="absolute inset-0 opacity-5">
+              <div className="absolute top-4 left-4 w-20 h-20 border-2 border-emerald-400 rounded-full"></div>
+              <div className="absolute bottom-4 right-4 w-16 h-16 border-2 border-green-400 rounded-full"></div>
+              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 border border-emerald-300 rounded-full"></div>
+            </div>
+            
+            <div className="relative z-10 text-center max-w-2xl mx-auto">
+              <motion.div
+                initial={{ scale: 0.9, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 0.6, delay: 1 }}
+                className="mb-6"
+              >
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-emerald-500 to-green-500 rounded-full mb-4">
+                  <span className="text-2xl">📬</span>
+                </div>
+                <h3 className="text-3xl font-bold text-white mb-4">
+                  Join My Newsletter
+                </h3>
+                <p className="text-gray-300 text-lg">
+                  Stay updated with my latest projects, tech insights, and development journey. 
+                  No spam, just valuable content delivered to your inbox.
+                </p>
+              </motion.div>
+
+              <motion.form
+                onSubmit={handleNewsletterSubmit}
+                initial={{ y: 20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.6, delay: 1.2 }}
+                className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto"
+              >
+                <Input
+                  type="email"
+                  required
+                  value={newsletterEmail}
+                  onChange={(e) => setNewsletterEmail(e.target.value)}
+                  placeholder="Enter your email"
+                  className="flex-1 bg-white/10 border-emerald-500/30 text-white placeholder-gray-400 focus:border-emerald-400 rounded-xl"
+                />
+                <Button
+                  type="submit"
+                  disabled={isNewsletterSubmitting}
+                  className="bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white px-8 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:transform-none shadow-lg"
+                >
+                  {isNewsletterSubmitting ? "Subscribing..." : "Subscribe"}
+                </Button>
+              </motion.form>
+
+              <motion.p
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.6, delay: 1.4 }}
+                className="text-sm text-gray-400 mt-4"
+              >
+                🔒 Your email is safe with me. Unsubscribe anytime.
+              </motion.p>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </motion.div>
   );

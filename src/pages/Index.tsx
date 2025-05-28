@@ -8,10 +8,6 @@ const Index = () => {
     window.open("https://drive.google.com/file/d/1zlqvr_Be5x_5sUv3psWdsnpZK5YjL1S-/view?usp=sharing", "_blank");
   };
 
-  const handleNewsletterSubscribe = () => {
-    window.open("https://makesimplewithbharath.beehiiv.com/", "_blank");
-  };
-
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -81,7 +77,7 @@ const Index = () => {
             </div>
           </a>
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/bharathvetrayan2004"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-blue-400 transition-colors duration-300 transform hover:scale-110"
@@ -100,32 +96,6 @@ const Index = () => {
               LC
             </div>
           </a>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 1.8 }}
-          className="mt-16"
-        >
-          <div className="relative bg-gradient-to-r from-green-500/10 to-emerald-500/10 backdrop-blur-sm rounded-2xl p-8 border border-green-500/20 max-w-sm mx-auto">
-            <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-              <div className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-1 rounded-full text-sm font-medium">
-                📧 Newsletter
-              </div>
-            </div>
-            <div className="text-center mt-4">
-              <h3 className="text-lg font-bold text-white mb-4">
-                Stay Updated
-              </h3>
-              <Button
-                onClick={handleNewsletterSubscribe}
-                className="w-full bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg"
-              >
-                Subscribe Now
-              </Button>
-            </div>
-          </div>
         </motion.div>
       </div>
 
