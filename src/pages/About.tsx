@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 
 const About = () => {
@@ -91,10 +90,12 @@ const About = () => {
           >
             <div className="relative w-80 h-80 mx-auto">
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full blur-2xl opacity-20 animate-pulse" />
-              <div className="relative w-full h-full bg-gradient-to-br from-gray-800 to-gray-900 rounded-full border border-blue-500/30 flex items-center justify-center">
-                <div className="text-6xl font-bold bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
-                  B
-                </div>
+              <div className="relative w-full h-full rounded-full border-4 border-blue-500/30 overflow-hidden bg-gradient-to-br from-gray-800 to-gray-900">
+                <img
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
+                  alt="Bharath Vetrayan"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
           </motion.div>

@@ -113,22 +113,24 @@ const Contact = () => {
                 Follow Me
               </h4>
               <div className="flex space-x-4">
-                {[
-                  { name: "GitHub", color: "from-gray-600 to-gray-800", url: "https://github.com" },
-                  { name: "LinkedIn", color: "from-blue-600 to-blue-800", url: "https://linkedin.com" },
-                  { name: "Twitter", color: "from-blue-400 to-blue-600", url: "https://twitter.com" },
-                ].map((social) => (
-                  <motion.a
-                    key={social.name}
-                    href={social.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    whileHover={{ scale: 1.1, y: -2 }}
-                    className={`w-12 h-12 bg-gradient-to-r ${social.color} rounded-full flex items-center justify-center text-white font-bold transition-all duration-300`}
-                  >
-                    {social.name.slice(0, 2)}
-                  </motion.a>
-                ))}
+                <motion.a
+                  href="https://github.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.1, y: -2 }}
+                  className="w-12 h-12 bg-gradient-to-r from-gray-600 to-gray-800 rounded-full flex items-center justify-center text-white font-bold transition-all duration-300"
+                >
+                  GH
+                </motion.a>
+                <motion.a
+                  href="https://www.linkedin.com/in/bharathvetrayan2004"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.1, y: -2 }}
+                  className="w-12 h-12 bg-gradient-to-r from-blue-600 to-blue-800 rounded-full flex items-center justify-center text-white font-bold transition-all duration-300"
+                >
+                  LI
+                </motion.a>
               </div>
             </div>
           </motion.div>
