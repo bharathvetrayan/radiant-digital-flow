@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -250,8 +249,7 @@ const Contact = () => {
                   Join My Newsletter
                 </h3>
                 <p className="text-gray-300 text-lg">
-                  Stay updated with my latest projects, tech insights, and development journey. 
-                  No spam, just valuable content delivered to your inbox.
+                  I run a personal newsletter where I share life lessons, meaningful experiences, and reflections on personal growth. It's my way of connecting with people through honest and insightful writing.
                 </p>
               </motion.div>
 
