@@ -11,9 +11,7 @@ const Contact = () => {
     email: "",
     message: ""
   });
-  const [newsletterEmail, setNewsletterEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isNewsletterSubmitting, setIsNewsletterSubmitting] = useState(false);
   const { toast } = useToast();
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -32,20 +30,8 @@ const Contact = () => {
     setIsSubmitting(false);
   };
 
-  const handleNewsletterSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsNewsletterSubmitting(true);
-
-    // Simulate newsletter subscription
-    await new Promise(resolve => setTimeout(resolve, 1000));
-
-    toast({
-      title: "Subscribed successfully!",
-      description: "Welcome to my newsletter! You'll receive updates on my latest projects.",
-    });
-
-    setNewsletterEmail("");
-    setIsNewsletterSubmitting(false);
+  const handleNewsletterClick = () => {
+    window.open("https://makesimplewithbharath.beehiiv.com/", "_blank");
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -253,29 +239,19 @@ const Contact = () => {
                 </p>
               </motion.div>
 
-              <motion.form
-                onSubmit={handleNewsletterSubmit}
+              <motion.div
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.6, delay: 1.2 }}
-                className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto"
+                className="max-w-md mx-auto"
               >
-                <Input
-                  type="email"
-                  required
-                  value={newsletterEmail}
-                  onChange={(e) => setNewsletterEmail(e.target.value)}
-                  placeholder="Enter your email"
-                  className="flex-1 bg-white/10 border-emerald-500/30 text-white placeholder-gray-400 focus:border-emerald-400 rounded-xl"
-                />
                 <Button
-                  type="submit"
-                  disabled={isNewsletterSubmitting}
-                  className="bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white px-8 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:transform-none shadow-lg"
+                  onClick={handleNewsletterClick}
+                  className="w-full bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white px-8 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg"
                 >
-                  {isNewsletterSubmitting ? "Subscribing..." : "Subscribe"}
+                  Subscribe to Newsletter
                 </Button>
-              </motion.form>
+              </motion.div>
 
               <motion.p
                 initial={{ opacity: 0 }}
