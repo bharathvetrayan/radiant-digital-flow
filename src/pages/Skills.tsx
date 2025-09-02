@@ -6,24 +6,30 @@ const Skills = () => {
     {
       title: "Programming Languages",
       skills: [
-        { name: "Java", level: 85 },
-        { name: "C", level: 80 },
-        { name: "Dart", level: 75 },
+        { name: "Java", level: 65 },
+        { name: "C", level: 45 },
       ]
     },
     {
       title: "Web Development",
       skills: [
-        { name: "HTML", level: 90 },
-        { name: "CSS", level: 85 },
+        { name: "HTML", level: 45 },
+        { name: "CSS", level: 45 },
         { name: "JavaScript", level: 80 },
       ]
     },
     {
-      title: "Tools & Version Control",
+      title: "Version Control & Tools",
       skills: [
-        { name: "Git", level: 85 },
-        { name: "Android Studio", level: 75 },
+        { name: "Git", level: 65 },
+        { name: "GitHub", level: 65 },
+      ]
+    },
+    {
+      title: "AI Tools",
+      skills: [
+        { name: "n8n", level: 70 },
+        { name: "Flowise", level: 65 },
       ]
     }
   ];
@@ -49,7 +55,7 @@ const Skills = () => {
           <div className="h-1 w-24 bg-gradient-to-r from-blue-400 to-purple-600 mx-auto" />
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {skillCategories.map((category, categoryIndex) => (
             <motion.div
               key={category.title}
