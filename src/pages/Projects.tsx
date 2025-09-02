@@ -5,28 +5,44 @@ import { Button } from "@/components/ui/button";
 const Projects = () => {
   const projects = [
     {
-      title: "Netflix Landing Page Clone",
-      description: "A responsive clone of Netflix's landing page using HTML, CSS, and JavaScript.",
-      tech: ["HTML", "CSS", "JavaScript"],
+      title: "Email Automation",
+      description: "Automated email workflows and campaigns using n8n for streamlined communication and marketing processes.",
+      tech: ["n8n", "Email API", "Automation"],
       image: "/placeholder.svg",
       liveUrl: "#",
       githubUrl: "#"
     },
     {
-      title: "Sign-up Page",
-      description: "A modern and responsive sign-up page with form validation.",
-      tech: ["HTML", "CSS", "JavaScript"],
+      title: "SQL AI Chatbot",
+      description: "Intelligent chatbot that can query and analyze SQL databases using natural language processing.",
+      tech: ["AI", "SQL", "NLP", "Chatbot"],
       image: "/placeholder.svg",
       liveUrl: "#",
       githubUrl: "#"
     },
     {
-      title: "Real-time Chat App",
-      description: "Android chat application developed using Android Studio.",
-      tech: ["Java", "Android Studio", "XML"],
+      title: "Telegram Chatbot Automation",
+      description: "Automated Telegram bot built with n8n for handling user interactions and automated responses.",
+      tech: ["n8n", "Telegram API", "Automation"],
       image: "/placeholder.svg",
       liveUrl: "#",
       githubUrl: "#"
+    },
+    {
+      title: "AI RAG Chat Model",
+      description: "Retrieval-Augmented Generation chat model created using Flowise for enhanced AI conversations.",
+      tech: ["Flowise", "RAG", "AI", "LLM"],
+      image: "/placeholder.svg",
+      liveUrl: "#",
+      githubUrl: "#"
+    },
+    {
+      title: "AI Calories Analyzer",
+      description: "Smart web application that analyzes food images to calculate calorie content with n8n integration.",
+      tech: ["AI", "Computer Vision", "n8n", "Web App"],
+      image: "/placeholder.svg",
+      liveUrl: "https://hillcalories.netlify.app/",
+      githubUrl: "https://github.com/bharathvetrayan/food-vision-grams.git"
     }
   ];
 
