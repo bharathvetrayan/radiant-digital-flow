@@ -11,23 +11,17 @@ const Contact = () => {
     email: "",
     message: ""
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  
   const { toast } = useToast();
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
-
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-
-    toast({
-      title: "Message sent successfully!",
-      description: "Thank you for reaching out. I'll get back to you soon.",
-    });
-
-    setFormData({ name: "", email: "", message: "" });
-    setIsSubmitting(false);
+    
+    const { name, email, message } = formData;
+    const subject = `Message from ${name}`;
+    const body = `Hi Bharath,%0D%0A%0D%0AName: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage:%0D%0A${message}`;
+    
+    window.open(`mailto:bharathvetrayan11@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`, '_blank');
   };
 
   const handleNewsletterClick = () => {
@@ -197,10 +191,9 @@ const Contact = () => {
 
               <Button
                 type="submit"
-                disabled={isSubmitting}
-                className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white py-3 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:transform-none"
+                className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white py-3 transition-all duration-300 transform hover:scale-105"
               >
-                {isSubmitting ? "Sending..." : "Send Message"}
+                Send Message
               </Button>
             </form>
           </motion.div>
