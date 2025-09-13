@@ -142,18 +142,11 @@ const About = () => {
 
                 {/* Central logo content */}
                 <div className="relative z-20 flex flex-col items-center">
-                  <div className="relative mb-3">
+                  <div className="relative">
                     <div className="text-7xl font-black bg-gradient-to-br from-blue-400 via-cyan-400 to-purple-500 bg-clip-text text-transparent drop-shadow-lg" style={{fontFamily: 'system-ui, -apple-system, sans-serif'}}>
                       B
                     </div>
                     <div className="absolute -inset-1 bg-gradient-to-br from-blue-400/20 to-purple-500/20 blur-sm -z-10 rounded-lg" />
-                  </div>
-                  <div className="flex items-center space-x-2 text-xs">
-                    <span className="text-blue-400 font-bold tracking-[0.2em]">AI</span>
-                    <div className="w-1 h-1 bg-cyan-400 rounded-full animate-pulse" />
-                    <span className="text-cyan-400 font-bold tracking-[0.2em]">AUTOMATION</span>
-                    <div className="w-1 h-1 bg-purple-400 rounded-full animate-pulse" style={{animationDelay: '0.5s'}} />
-                    <span className="text-purple-400 font-bold tracking-[0.2em]">TECH</span>
                   </div>
                 </div>
 
