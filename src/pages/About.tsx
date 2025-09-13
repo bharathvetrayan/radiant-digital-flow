@@ -140,13 +140,16 @@ const About = () => {
                   </svg>
                 </div>
 
-                {/* Central logo content */}
+                {/* Central profile photo */}
                 <div className="relative z-20 flex flex-col items-center">
-                  <div className="relative">
-                    <div className="text-7xl font-black bg-gradient-to-br from-blue-400 via-cyan-400 to-purple-500 bg-clip-text text-transparent drop-shadow-lg" style={{fontFamily: 'system-ui, -apple-system, sans-serif'}}>
-                      B
-                    </div>
-                    <div className="absolute -inset-1 bg-gradient-to-br from-blue-400/20 to-purple-500/20 blur-sm -z-10 rounded-lg" />
+                  <div className="relative w-48 h-48 rounded-full overflow-hidden border-4 border-gradient-to-r from-blue-400 to-purple-600 shadow-2xl">
+                    <div className="absolute inset-0 bg-gradient-to-br from-blue-400/10 to-purple-600/10 rounded-full" />
+                    <img 
+                      src="/src/assets/profile-photo.jpg" 
+                      alt="Bharath Kumar - AI & Automation Enthusiast" 
+                      className="w-full h-full object-cover rounded-full relative z-10"
+                    />
+                    <div className="absolute inset-0 rounded-full border-2 border-blue-400/30 animate-pulse" />
                   </div>
                 </div>
 
