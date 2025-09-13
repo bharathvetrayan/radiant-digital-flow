@@ -142,14 +142,20 @@ const About = () => {
 
                 {/* Central profile photo */}
                 <div className="relative z-20 flex flex-col items-center">
-                  <div className="relative w-48 h-48 rounded-full overflow-hidden border-4 border-gradient-to-r from-blue-400 to-purple-600 shadow-2xl">
-                    <div className="absolute inset-0 bg-gradient-to-br from-blue-400/10 to-purple-600/10 rounded-full" />
+                  <div className="relative w-64 h-64 rounded-2xl overflow-hidden shadow-2xl">
+                    {/* Clean, clear photo display */}
                     <img 
                       src="/src/assets/profile-photo.jpg" 
                       alt="Bharath Kumar - AI & Automation Enthusiast" 
-                      className="w-full h-full object-cover rounded-full relative z-10"
+                      className="w-full h-full object-cover object-center brightness-110 contrast-105"
                     />
-                    <div className="absolute inset-0 rounded-full border-2 border-blue-400/30 animate-pulse" />
+                    {/* Subtle tech border */}
+                    <div className="absolute inset-0 rounded-2xl border-2 border-gradient-to-r from-blue-400/40 to-purple-600/40 pointer-events-none" />
+                    {/* Corner accents for tech look */}
+                    <div className="absolute top-2 left-2 w-4 h-4 border-l-2 border-t-2 border-blue-400 rounded-tl-lg" />
+                    <div className="absolute top-2 right-2 w-4 h-4 border-r-2 border-t-2 border-cyan-400 rounded-tr-lg" />
+                    <div className="absolute bottom-2 left-2 w-4 h-4 border-l-2 border-b-2 border-purple-400 rounded-bl-lg" />
+                    <div className="absolute bottom-2 right-2 w-4 h-4 border-r-2 border-b-2 border-green-400 rounded-br-lg" />
                   </div>
                 </div>
 
