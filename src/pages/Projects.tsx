@@ -43,6 +43,14 @@ const Projects = () => {
       image: "/placeholder.svg",
       liveUrl: "https://hillcalories.netlify.app/",
       githubUrl: "https://github.com/bharathvetrayan/food-vision-grams.git"
+    },
+    {
+      title: "Web Scraper Automation",
+      description: "Intelligent web scraping solution built with n8n and Lovable AI for automated data extraction and processing.",
+      tech: ["n8n", "Lovable AI", "Web Scraping", "Automation"],
+      image: "/placeholder.svg",
+      liveUrl: "#",
+      githubUrl: "#"
     }
   ];
 
