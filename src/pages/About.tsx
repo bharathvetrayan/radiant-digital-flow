@@ -84,26 +84,89 @@ const About = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="relative flex justify-center"
           >
-            <div className="relative">
-              {/* Professional photo display */}
-              <div className="relative w-80 h-96 rounded-3xl overflow-hidden bg-white shadow-2xl">
-                <img 
-                  src="/src/assets/profile-photo.jpg" 
-                  alt="Bharath Kumar - AI & Automation Enthusiast" 
-                  className="w-full h-full object-cover object-top"
-                />
+            <div className="relative w-96 h-96">
+              {/* AI Brain Visualization */}
+              <div className="relative w-full h-full rounded-3xl bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-cyan-500/10 border border-blue-500/20 backdrop-blur-sm overflow-hidden">
+                
+                {/* Neural Network Pattern */}
+                <div className="absolute inset-0 opacity-30">
+                  <svg viewBox="0 0 300 300" className="w-full h-full">
+                    {/* Nodes */}
+                    <circle cx="75" cy="75" r="4" fill="#3b82f6" className="animate-pulse">
+                      <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite" />
+                    </circle>
+                    <circle cx="225" cy="75" r="4" fill="#06b6d4" className="animate-pulse">
+                      <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite" />
+                    </circle>
+                    <circle cx="75" cy="150" r="4" fill="#8b5cf6" className="animate-pulse">
+                      <animate attributeName="opacity" values="0.5;1;0.5" dur="1.5s" repeatCount="indefinite" />
+                    </circle>
+                    <circle cx="150" cy="150" r="6" fill="#10b981" className="animate-pulse">
+                      <animate attributeName="opacity" values="1;0.5;1" dur="1s" repeatCount="indefinite" />
+                    </circle>
+                    <circle cx="225" cy="150" r="4" fill="#f59e0b" className="animate-pulse">
+                      <animate attributeName="opacity" values="0.3;1;0.3" dur="1.8s" repeatCount="indefinite" />
+                    </circle>
+                    <circle cx="75" cy="225" r="4" fill="#ef4444" className="animate-pulse">
+                      <animate attributeName="opacity" values="1;0.3;1" dur="2.2s" repeatCount="indefinite" />
+                    </circle>
+                    <circle cx="225" cy="225" r="4" fill="#8b5cf6" className="animate-pulse">
+                      <animate attributeName="opacity" values="0.5;1;0.5" dur="1.7s" repeatCount="indefinite" />
+                    </circle>
+                    
+                    {/* Connections */}
+                    <line x1="75" y1="75" x2="150" y2="150" stroke="#3b82f6" strokeWidth="1" opacity="0.4">
+                      <animate attributeName="opacity" values="0.2;0.8;0.2" dur="2s" repeatCount="indefinite" />
+                    </line>
+                    <line x1="225" y1="75" x2="150" y2="150" stroke="#06b6d4" strokeWidth="1" opacity="0.4">
+                      <animate attributeName="opacity" values="0.8;0.2;0.8" dur="2s" repeatCount="indefinite" />
+                    </line>
+                    <line x1="75" y1="150" x2="150" y2="150" stroke="#8b5cf6" strokeWidth="1" opacity="0.4">
+                      <animate attributeName="opacity" values="0.4;0.9;0.4" dur="1.5s" repeatCount="indefinite" />
+                    </line>
+                    <line x1="225" y1="150" x2="150" y2="150" stroke="#f59e0b" strokeWidth="1" opacity="0.4">
+                      <animate attributeName="opacity" values="0.2;0.8;0.2" dur="1.8s" repeatCount="indefinite" />
+                    </line>
+                    <line x1="150" y1="150" x2="75" y2="225" stroke="#ef4444" strokeWidth="1" opacity="0.4">
+                      <animate attributeName="opacity" values="0.8;0.2;0.8" dur="2.2s" repeatCount="indefinite" />
+                    </line>
+                    <line x1="150" y1="150" x2="225" y2="225" stroke="#8b5cf6" strokeWidth="1" opacity="0.4">
+                      <animate attributeName="opacity" values="0.4;0.9;0.4" dur="1.7s" repeatCount="indefinite" />
+                    </line>
+                  </svg>
+                </div>
+
+                {/* Central AI Icon */}
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="w-20 h-20 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center shadow-lg">
+                    <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                    </svg>
+                  </div>
+                </div>
+
+                {/* Floating Tech Elements */}
+                <div className="absolute top-4 left-4 text-blue-400 opacity-60">
+                  <div className="text-sm font-mono animate-bounce">AI</div>
+                </div>
+                <div className="absolute top-4 right-4 text-cyan-400 opacity-60">
+                  <div className="text-sm font-mono animate-bounce" style={{ animationDelay: '0.5s' }}>ML</div>
+                </div>
+                <div className="absolute bottom-4 left-4 text-purple-400 opacity-60">
+                  <div className="text-sm font-mono animate-bounce" style={{ animationDelay: '1s' }}>API</div>
+                </div>
+                <div className="absolute bottom-4 right-4 text-green-400 opacity-60">
+                  <div className="text-sm font-mono animate-bounce" style={{ animationDelay: '1.5s' }}>BOT</div>
+                </div>
               </div>
-              
-              {/* Professional frame border */}
-              <div className="absolute inset-0 rounded-3xl border-4 border-gradient-to-br from-blue-400 via-cyan-400 to-purple-500 opacity-60"></div>
-              
-              {/* Tech corner indicators */}
+
+              {/* Corner Tech Indicators */}
               <div className="absolute -top-2 -left-2 w-6 h-6 border-l-4 border-t-4 border-blue-400 rounded-tl-2xl"></div>
               <div className="absolute -top-2 -right-2 w-6 h-6 border-r-4 border-t-4 border-cyan-400 rounded-tr-2xl"></div>
               <div className="absolute -bottom-2 -left-2 w-6 h-6 border-l-4 border-b-4 border-purple-400 rounded-bl-2xl"></div>
               <div className="absolute -bottom-2 -right-2 w-6 h-6 border-r-4 border-b-4 border-green-400 rounded-br-2xl"></div>
               
-              {/* Subtle glow effect */}
+              {/* Glow Effect */}
               <div className="absolute -inset-4 bg-gradient-to-r from-blue-500/20 to-purple-600/20 rounded-3xl blur-xl -z-10"></div>
             </div>
           </motion.div>
