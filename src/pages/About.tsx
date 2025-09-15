@@ -131,10 +131,10 @@ const About = () => {
                   <span className="text-blue-300 font-bold text-sm">AI</span>
                 </div>
                 <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500/30 to-purple-600/30 backdrop-blur-sm border border-purple-400/40 flex items-center justify-center">
-                  <span className="text-purple-300 font-bold text-sm">ML</span>
+                  <span className="text-purple-300 font-bold text-xs">n8n</span>
                 </div>
                 <div className="absolute -left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500/30 to-cyan-600/30 backdrop-blur-sm border border-cyan-400/40 flex items-center justify-center">
-                  <span className="text-cyan-300 font-bold text-xs">API</span>
+                  <span className="text-cyan-300 font-bold text-xs">code</span>
                 </div>
                 <div className="absolute -right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 rounded-xl bg-gradient-to-br from-green-500/30 to-green-600/30 backdrop-blur-sm border border-green-400/40 flex items-center justify-center">
                   <span className="text-green-300 font-bold text-xs">BOT</span>
