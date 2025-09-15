@@ -5,7 +5,7 @@ const Projects = () => {
   const projects = [
     {
       title: "Email Automation",
-      description: "Automated email workflows and campaigns using n8n for streamlined communication and marketing processes.",
+      description: "Streamlined email workflows with intelligent automation",
       tech: ["n8n", "Email API", "Automation"],
       category: "Automation",
       status: "Completed",
@@ -14,7 +14,7 @@ const Projects = () => {
     },
     {
       title: "SQL AI Chatbot",
-      description: "Intelligent chatbot that can query and analyze SQL databases using natural language processing.",
+      description: "Natural language database queries with AI intelligence",
       tech: ["AI", "SQL", "NLP", "Chatbot"],
       category: "AI Development",
       status: "Active",
@@ -22,8 +22,8 @@ const Projects = () => {
       color: "from-blue-400 to-indigo-500"
     },
     {
-      title: "Telegram Bot Automation",
-      description: "Automated Telegram bot built with n8n for handling user interactions and automated responses.",
+      title: "Telegram Bot",
+      description: "Smart automation for seamless user interactions",
       tech: ["n8n", "Telegram API", "Automation"],
       category: "Bot Development",
       status: "Completed",
@@ -31,8 +31,8 @@ const Projects = () => {
       color: "from-purple-400 to-pink-500"
     },
     {
-      title: "AI RAG Chat Model",
-      description: "Retrieval-Augmented Generation chat model created using Flowise for enhanced AI conversations.",
+      title: "AI RAG Chat",
+      description: "Context-aware conversations with enhanced AI",
       tech: ["Flowise", "RAG", "AI", "LLM"],
       category: "AI Development",
       status: "Completed",
@@ -40,8 +40,8 @@ const Projects = () => {
       color: "from-cyan-400 to-blue-500"
     },
     {
-      title: "AI Calories Analyzer",
-      description: "Smart web application that analyzes food images to calculate calorie content with n8n integration.",
+      title: "Calorie Analyzer",
+      description: "AI-powered food image analysis for health tracking",
       tech: ["AI", "Computer Vision", "n8n", "Web App"],
       category: "Computer Vision",
       status: "Live",
@@ -49,8 +49,8 @@ const Projects = () => {
       color: "from-orange-400 to-red-500"
     },
     {
-      title: "Web Scraper Automation",
-      description: "Intelligent web scraping solution built with n8n and Lovable AI for automated data extraction.",
+      title: "Web Scraper",
+      description: "Intelligent data extraction with 24/7 monitoring",
       tech: ["n8n", "Lovable AI", "Web Scraping", "Automation"],
       category: "Data Processing",
       status: "Active",
@@ -88,142 +88,108 @@ const Projects = () => {
           <div className="flex justify-center mb-8">
             <div className="h-1 w-32 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full"></div>
           </div>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Crafting intelligent automation solutions that transform complex workflows into seamless experiences
+          <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+            Crafting intelligent solutions that transform workflows
           </p>
         </motion.div>
 
-        {/* Projects Grid */}
-        <div className="grid lg:grid-cols-2 gap-8 mb-20">
-          {projects.map((project, index) => (
-            <motion.div
-              key={project.title}
-              initial={{ 
-                y: 100,
-                opacity: 0,
-                rotateX: 45
-              }}
-              animate={{ 
-                y: 0,
-                opacity: 1,
-                rotateX: 0
-              }}
-              transition={{ 
-                duration: 0.8,
-                delay: 0.1 * index,
-                type: "spring",
-                stiffness: 100
-              }}
-              whileHover={{ 
-                y: -20,
-                rotateX: 5,
-                rotateY: index % 2 === 0 ? 5 : -5,
-                scale: 1.02,
-                transition: { duration: 0.3 }
-              }}
-              style={{ 
-                perspective: "1000px",
-                transformStyle: "preserve-3d"
-              }}
-              className="group cursor-pointer"
-            >
-              <div className="relative bg-gradient-to-br from-gray-900/60 via-gray-800/40 to-gray-900/60 backdrop-blur-2xl rounded-3xl p-8 border border-gray-700/50 shadow-2xl overflow-hidden">
-                
-                {/* Floating Gradient Orb */}
-                <div className={`absolute -top-10 -right-10 w-32 h-32 bg-gradient-to-br ${project.color} rounded-full opacity-20 blur-2xl group-hover:opacity-40 transition-opacity duration-500`}></div>
-                
-                {/* Status Badge */}
-                <div className="absolute top-6 right-6">
-                  <div className={`px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider backdrop-blur-sm ${
-                    project.status === 'Live' ? 'bg-green-500/20 text-green-300 border border-green-500/40' :
-                    project.status === 'Active' ? 'bg-blue-500/20 text-blue-300 border border-blue-500/40' :
-                    'bg-purple-500/20 text-purple-300 border border-purple-500/40'
-                  }`}>
-                    {project.status}
+        {/* Modern Grid Layout */}
+        <div className="relative">
+          {/* Floating Cards */}
+          <div className="grid lg:grid-cols-3 gap-6">
+            {projects.map((project, index) => (
+              <motion.div
+                key={project.title}
+                initial={{ 
+                  y: 60,
+                  opacity: 0,
+                  scale: 0.9
+                }}
+                animate={{ 
+                  y: 0,
+                  opacity: 1,
+                  scale: 1
+                }}
+                transition={{ 
+                  duration: 0.6,
+                  delay: 0.1 * index,
+                  ease: "easeOut"
+                }}
+                whileHover={{ 
+                  y: -10,
+                  scale: 1.02,
+                  transition: { duration: 0.2 }
+                }}
+                className="group relative"
+              >
+                <div className="relative bg-gray-900/50 backdrop-blur-xl rounded-2xl p-6 border border-gray-800/50 hover:border-gray-700/60 transition-all duration-300 overflow-hidden">
+                  
+                  {/* Status Indicator */}
+                  <div className="absolute top-6 right-6">
+                    <div className={`w-3 h-3 rounded-full ${
+                      project.status === 'Live' ? 'bg-green-400 shadow-green-400/50' :
+                      project.status === 'Active' ? 'bg-blue-400 shadow-blue-400/50' :
+                      'bg-purple-400 shadow-purple-400/50'
+                    } shadow-lg animate-pulse`}></div>
                   </div>
-                </div>
 
-                {/* Project Icon */}
-                <div className="relative mb-6">
-                  <div className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${project.color} flex items-center justify-center text-white text-2xl font-black shadow-lg group-hover:shadow-xl transition-shadow duration-300`}>
+                  {/* Project Icon */}
+                  <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${project.color} flex items-center justify-center text-white text-lg font-bold mb-4 group-hover:scale-110 transition-transform duration-300`}>
                     {project.title.split(' ').map(word => word[0]).join('').slice(0, 2)}
                   </div>
-                </div>
 
-                {/* Content */}
-                <div className="relative z-10">
-                  <div className="flex items-center justify-between mb-4">
-                    <h3 className="text-2xl font-bold text-white group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-purple-400 group-hover:bg-clip-text transition-all duration-300">
-                      {project.title}
-                    </h3>
-                  </div>
+                  {/* Content */}
+                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-purple-400 group-hover:bg-clip-text transition-all duration-300">
+                    {project.title}
+                  </h3>
 
-                  <p className="text-gray-300 text-base leading-relaxed mb-6">
+                  <p className="text-gray-400 text-sm mb-4 leading-relaxed">
                     {project.description}
                   </p>
 
-                  {/* Impact Metric */}
-                  <div className="flex items-center mb-6">
-                    <div className="w-2 h-2 bg-green-400 rounded-full mr-3 animate-pulse"></div>
-                    <span className="text-green-300 text-sm font-medium">{project.impact}</span>
-                  </div>
-
                   {/* Tech Stack */}
-                  <div className="flex flex-wrap gap-3">
-                    {project.tech.map((tech, techIndex) => (
-                      <motion.span
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {project.tech.slice(0, 3).map((tech) => (
+                      <span
                         key={tech}
-                        initial={{ scale: 0, opacity: 0 }}
-                        animate={{ scale: 1, opacity: 1 }}
-                        transition={{ delay: 0.2 + techIndex * 0.1 }}
-                        className="px-4 py-2 bg-white/5 backdrop-blur-sm text-gray-300 rounded-xl text-sm font-medium border border-white/10 hover:border-white/20 hover:bg-white/10 transition-all duration-200"
+                        className="px-3 py-1 bg-white/5 text-gray-300 rounded-lg text-xs font-medium border border-white/10"
                       >
                         {tech}
-                      </motion.span>
+                      </span>
                     ))}
+                    {project.tech.length > 3 && (
+                      <span className="px-3 py-1 bg-white/5 text-gray-400 rounded-lg text-xs">
+                        +{project.tech.length - 3}
+                      </span>
+                    )}
                   </div>
-                </div>
 
-                {/* Hover Glow Effect */}
-                <div className={`absolute inset-0 rounded-3xl bg-gradient-to-br ${project.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500 pointer-events-none`}></div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
+                  {/* Impact */}
+                  <div className="flex items-center text-sm">
+                    <div className="w-2 h-2 bg-green-400 rounded-full mr-2"></div>
+                    <span className="text-green-300 font-medium">{project.impact}</span>
+                  </div>
 
-        {/* Analytics Dashboard */}
-        <motion.div
-          initial={{ y: 50, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8, delay: 1 }}
-          className="bg-gradient-to-br from-gray-900/80 via-gray-800/60 to-gray-900/80 backdrop-blur-2xl rounded-3xl p-8 border border-gray-700/50"
-        >
-          <h3 className="text-2xl font-bold text-white text-center mb-8">Project Analytics</h3>
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {[
-              { label: "Total Projects", value: projects.length, color: "from-blue-400 to-cyan-400" },
-              { label: "Live Projects", value: projects.filter(p => p.status === "Live").length, color: "from-green-400 to-emerald-400" },
-              { label: "Active Development", value: projects.filter(p => p.status === "Active").length, color: "from-purple-400 to-pink-400" },
-              { label: "Technologies", value: new Set(projects.flatMap(p => p.tech)).size, color: "from-orange-400 to-red-400" }
-            ].map((stat, index) => (
-              <motion.div
-                key={stat.label}
-                initial={{ scale: 0.8, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                transition={{ delay: 1.2 + index * 0.1 }}
-                className="text-center group"
-              >
-                <div className={`text-4xl md:text-5xl font-black mb-3 bg-gradient-to-r ${stat.color} bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300`}>
-                  {stat.value}
-                </div>
-                <div className="text-gray-400 text-sm uppercase tracking-wider font-medium">
-                  {stat.label}
+                  {/* Hover Glow */}
+                  <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${project.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500 pointer-events-none`}></div>
                 </div>
               </motion.div>
             ))}
           </div>
-        </motion.div>
+
+          {/* Bottom CTA */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
+            className="text-center mt-16"
+          >
+            <div className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500/10 to-purple-500/10 backdrop-blur-sm rounded-full border border-blue-500/20">
+              <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
+              <span className="text-blue-300 font-medium">More projects in development</span>
+            </div>
+          </motion.div>
+        </div>
       </div>
     </motion.div>
   );
