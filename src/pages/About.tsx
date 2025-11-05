@@ -53,11 +53,10 @@ const About = () => {
           >
             <div className="prose prose-lg text-gray-300 max-w-none">
               <p className="text-xl leading-relaxed">
-                I am an AI and Automation enthusiast studying Information Technology at 
-                VSB College of Engineering and Technical Campus, Coimbatore. I specialize in 
-                creating intelligent automation solutions using cutting-edge tools like n8n 
-                and Flowise. My focus is on building AI-powered systems that streamline 
-                workflows and solve complex problems through automation.
+                I have completed a B.Tech in Information Technology bachelor degree from 
+                VSB College of Engineering and Technical Campus, Coimbatore. I am skilled in 
+                Java, SQL, and AI automation using n8n. My focus is on building intelligent 
+                automation solutions and developing robust applications.
               </p>
             </div>
 
@@ -67,7 +66,7 @@ const About = () => {
               transition={{ duration: 0.8, delay: 0.8 }}
               className="flex flex-wrap gap-4"
             >
-              {["AI", "Automation", "n8n", "Flowise", "Java", "HTML", "CSS", "Git"].map((tech, index) => (
+              {["AI", "Automation", "n8n", "Flowise", "Java", "SQL", "Git"].map((tech, index) => (
                 <span
                   key={tech}
                   className="px-4 py-2 bg-gradient-to-r from-blue-500/20 to-purple-600/20 border border-blue-500/30 rounded-full text-blue-400 text-sm font-medium"
