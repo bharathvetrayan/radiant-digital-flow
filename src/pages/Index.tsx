@@ -5,7 +5,7 @@ import ThreeScene from "@/components/ThreeScene";
 
 const Index = () => {
   const handleDownloadResume = () => {
-    window.open("https://drive.google.com/file/d/16euUgBKRKl0-qeaLhbHt_AkqqP2Eh5EX/view?usp=sharing", "_blank");
+    window.open("https://drive.google.com/file/d/16euUgBKRKl0-qeaLhbHt_AkqqP2Eh5EX/view?usp=drive_link", "_blank");
   };
 
   return (
@@ -132,9 +132,10 @@ const Index = () => {
           className="flex justify-center space-x-8"
         >
           {[
-            { href: "https://github.com", label: "GH", colors: "from-gray-500 to-gray-700" },
+            { href: "https://github.com/bharathvetrayan", label: "GH", colors: "from-gray-500 to-gray-700" },
             { href: "https://www.linkedin.com/in/bharathvetrayan2004", label: "LI", colors: "from-blue-500 to-blue-700" },
-            { href: "https://leetcode.com/u/bharathvetrayan/", label: "LC", colors: "from-yellow-500 to-orange-600" }
+            { href: "https://leetcode.com/u/bharathvetrayan/", label: "LC", colors: "from-yellow-500 to-orange-600" },
+            { href: "https://www.instagram.com/_bharathvetrayan_/", label: "IG", colors: "from-pink-500 to-rose-600" }
           ].map((social, index) => (
             <motion.a
               key={social.label}

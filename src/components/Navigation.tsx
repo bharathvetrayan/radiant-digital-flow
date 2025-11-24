@@ -16,7 +16,7 @@ const Navigation = () => {
   ];
 
   const handleDownloadResume = () => {
-    window.open("https://drive.google.com/file/d/16euUgBKRKl0-qeaLhbHt_AkqqP2Eh5EX/view?usp=sharing", "_blank");
+    window.open("https://drive.google.com/file/d/16euUgBKRKl0-qeaLhbHt_AkqqP2Eh5EX/view?usp=drive_link", "_blank");
   };
 
   return (
