@@ -1,7 +1,10 @@
 
 import { motion } from "framer-motion";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const Skills = () => {
+  const { ref: skillsRef, isVisible: skillsVisible } = useScrollAnimation({ threshold: 0.1 });
+
   const skillCategories = [
     {
       title: "Programming Languages",
@@ -52,13 +55,13 @@ const Skills = () => {
           <div className="h-1 w-24 bg-gradient-to-r from-blue-400 to-purple-600 mx-auto" />
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div ref={skillsRef} className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {skillCategories.map((category, categoryIndex) => (
             <motion.div
               key={category.title}
               initial={{ y: 50, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 * categoryIndex }}
+              animate={skillsVisible ? { y: 0, opacity: 1 } : { y: 50, opacity: 0 }}
+              transition={{ duration: 0.8, delay: skillsVisible ? 0.1 * categoryIndex : 0 }}
               className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50"
             >
               <h3 className="text-2xl font-bold text-blue-400 mb-6 text-center">

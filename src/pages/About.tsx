@@ -1,7 +1,11 @@
 
 import { motion } from "framer-motion";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const About = () => {
+  const { ref: educationRef, isVisible: educationVisible } = useScrollAnimation();
+  const { ref: internshipRef, isVisible: internshipVisible } = useScrollAnimation();
+
   const educationItems = [
     {
       title: "B.Tech Information Technology",
@@ -151,9 +155,10 @@ const About = () => {
         </div>
 
         <motion.div
+          ref={educationRef}
           initial={{ y: 50, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8, delay: 1 }}
+          animate={educationVisible ? { y: 0, opacity: 1 } : { y: 50, opacity: 0 }}
+          transition={{ duration: 0.8 }}
           className="mt-20"
         >
           <h3 className="text-2xl font-bold text-blue-400 mb-8 text-center">Education</h3>
@@ -180,9 +185,10 @@ const About = () => {
         </motion.div>
 
         <motion.div
+          ref={internshipRef}
           initial={{ y: 50, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8, delay: 1.6 }}
+          animate={internshipVisible ? { y: 0, opacity: 1 } : { y: 50, opacity: 0 }}
+          transition={{ duration: 0.8 }}
           className="mt-20"
         >
           <h3 className="text-2xl font-bold text-blue-400 mb-8 text-center">Internships</h3>
