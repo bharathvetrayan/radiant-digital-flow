@@ -5,7 +5,7 @@ import ThreeScene from "@/components/ThreeScene";
 
 const Index = () => {
   const handleDownloadResume = () => {
-    window.open("https://drive.google.com/file/d/1mqGVuzRRMykZonsSkFtgiw7cjw1vyx6X/view?usp=sharing", "_blank");
+    window.open("https://drive.google.com/file/d/16euUgBKRKl0-qeaLhbHt_AkqqP2Eh5EX/view?usp=sharing", "_blank");
   };
 
   return (
