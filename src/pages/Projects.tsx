@@ -1,7 +1,10 @@
 
 import { motion } from "framer-motion";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const Projects = () => {
+  const { ref: projectsRef, isVisible: projectsVisible } = useScrollAnimation({ threshold: 0.05 });
+
   const projects = [
     {
       title: "Email Automation",
@@ -96,7 +99,7 @@ const Projects = () => {
         {/* Modern Grid Layout */}
         <div className="relative">
           {/* Floating Cards */}
-          <div className="grid lg:grid-cols-3 gap-6">
+          <div ref={projectsRef} className="grid lg:grid-cols-3 gap-6">
             {projects.map((project, index) => (
               <motion.div
                 key={project.title}
@@ -105,14 +108,18 @@ const Projects = () => {
                   opacity: 0,
                   scale: 0.9
                 }}
-                animate={{ 
+                animate={projectsVisible ? { 
                   y: 0,
                   opacity: 1,
                   scale: 1
+                } : {
+                  y: 60,
+                  opacity: 0,
+                  scale: 0.9
                 }}
                 transition={{ 
                   duration: 0.6,
-                  delay: 0.1 * index,
+                  delay: projectsVisible ? 0.08 * index : 0,
                   ease: "easeOut"
                 }}
                 whileHover={{ 
